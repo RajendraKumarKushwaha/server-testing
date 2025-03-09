@@ -3,13 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+ 
   "scripts": {
-    "dev": "node server",
-    "build": "npm run build:client && npm run build:server",
-    "build:client": "vite build --outDir dist/client",
-    "build:server": "vite build --ssr src/entry-server.jsx --outDir dist/server",
-    "preview": "cross-env NODE_ENV=production node server"
-  },
+  "dev": "vite",
+  "build": "vite build && vite build --ssr src/entry-server.jsx",
+  "serve": "node server.js"
+},
+
   "dependencies": {
     "compression": "^1.8.0",
     "express": "^5.0.1",
